@@ -1,0 +1,23 @@
+CREATE TABLE `receitas` (
+  `id` bigint NOT NULL AUTO_INCREMENT,
+  `ingredientes` varchar(255) DEFAULT NULL,
+  `modoPreparo` varchar(255) DEFAULT NULL,
+  `utensilios` varchar(255) DEFAULT NULL,
+  `rendimento` varchar(255) DEFAULT NULL,
+  `tempoPreparo` varchar(255) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+)
+
+CREATE TABLE `usuario` (
+  `id` bigint NOT NULL AUTO_INCREMENT,
+  `login` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci DEFAULT NULL,
+  `senha` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci DEFAULT NULL,
+  `status` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci DEFAULT NULL,
+  `tipo` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci DEFAULT NULL,
+  PRIMARY KEY (`id`)
+)
+
+insert into usuario (login, senha, status, tipo) values
+("pires", "123", "ATIVO", "ADM");
+
+CREATE DATABASE `receitas`
