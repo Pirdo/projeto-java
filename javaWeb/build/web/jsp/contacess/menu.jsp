@@ -1,6 +1,6 @@
-<%@page contentType="text/html" pageEncoding="UTF-8"%>
-<%@page import="receitas.model.bean.Usuario"%>
-<%@page import="receitas.controller.ControllerUsuario"%>
+<%@ page contentType="text/html" pageEncoding="UTF-8"%>
+<%@ page import="receitas.model.bean.Usuario"%>
+<%@ page import="receitas.controller.ControllerUsuario" %>
 
 <%
     String login = request.getParameter("LOGIN");
@@ -19,10 +19,8 @@
     <body>
         <% if (usuSaida != null) { %>
             <!-- Dropdown1 Trigger -->
-            <a class='dropdown-button btn' data-beloworigin="true" href='#' data-activates='dropdown1'>Manter Usuário</a>        
-            <a class='dropdown-button btn' data-beloworigin="true" href='#' data-activates='dropdown2'>Manter Pessoa</a>        
-            <a class='dropdown-button btn' data-beloworigin="true" href='#' data-activates='dropdown3'>Manter Acesso</a>        
-            <a class='dropdown-button btn' data-beloworigin="true" href='#' data-activates='dropdown4'>Manter Logradouro</a>        
+            <a class='dropdown-button btn' data-beloworigin="true" href='#' data-activates='dropdown1'>Manter Usuário</a>              
+            <a class='dropdown-button btn' data-beloworigin="true" href='#' data-activates='dropdown4'>Manter Receitas</a>        
 
             <% if (usuSaida.getTipo().equals("ADM")) { %>
                 <!-- Dropdown1 Structure -->
@@ -36,36 +34,14 @@
                 </ul>
             <% } %>
             <% if (usuSaida.getTipo().equals("ADM")) { %>
-                <!-- Dropdown2 Structure -->
-                <ul id='dropdown2' class='dropdown-content'>
-                    <li><a href="../pessoa/inserirPessoa.jsp"> InseriPessoa </a></li>
-                    <li><a href="../pessoa/consultarPessoa.jsp"> ConsultaPessoa </a></li>
-                </ul>
-            <% } else { %>
-                <ul id='dropdown2' class='dropdown-content'>
-                    <li><a href="../pessoa/consultarPessoa.jsp"> ConsultaPessoa </a></li>
-                </ul>
-            <% } %>
-            <% if (usuSaida.getTipo().equals("ADM")) { %>
-                <!-- Dropdown3 Structure -->
-                <ul id='dropdown3' class='dropdown-content'>
-                    <li><a href="../usupes/inserirRelacaoUsuarioPessoa.jsp"> InseriUsuarioPessoa </a></li>
-                    <li><a href="../usupes/consultarRelacaoUsuarioPessoa.jsp"> ConsultaUsuarioPessoa </a></li>
-                </ul>
-            <% } else { %>
-                <ul id='dropdown3' class='dropdown-content'>
-                    <li><a href="../usuario/consultarRelacaoUsuarioPessoa.jsp"> ConsultaUsuarioPessoa </a></li>
-                </ul>
-            <% } %>
-            <% if (usuSaida.getTipo().equals("ADM")) { %>
                 <!-- Dropdown4 Structure -->
                 <ul id='dropdown4' class='dropdown-content'>
-                    <li><a href="../receitas/inserirLogradouro.jsp"> InseriLogradouro </a></li>
-                    <li><a href="../receitas/consultarLogradouro.jsp"> ConsultaLogradouro </a></li>
+                    <li><a href="../receitas/inserirReceitas.jsp"> Inserir Receitas </a></li>
+                    <li><a href="../receitas/consultarReceitas.jsp"> Consultar Receitas </a></li>
                 </ul>
             <% } else { %>
                 <ul id='dropdown4' class='dropdown-content'>
-                    <li><a href="../receitas/consultarLogradouro.jsp"> ConsultaLogradouro </a></li>
+                    <li><a href="../receitas/consultarReceitas.jsp"> Consultar Receitas </a></li>
                 </ul>
             <% } %>
 

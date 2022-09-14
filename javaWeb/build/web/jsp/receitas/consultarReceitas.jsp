@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html>
     <%@include file="../../inc/materalizeWeb.inc" %>
-    <title>CONSULTAR - PESSOA</title>
+    <title>CONSULTAR - Receitas</title>
     <body>
        <div class="container"/>
        <h1>CONSULTAR LOGRADOURO</h1>

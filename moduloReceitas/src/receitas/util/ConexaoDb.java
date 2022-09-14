@@ -19,9 +19,9 @@ public class ConexaoDb {
             // "com.mysql.jdbc.Driver"
             String driverName = "com.mysql.cj.jdbc.Driver";
             Class.forName(driverName);
-            String url ="jdbc:mysql://127.0.0.1:3306/receitas?useTimezone=true&serverTimezone=UTC";
+            String url ="jdbc:mysql://127.0.0.1:3307/receitas?useTimezone=true&serverTimezone=UTC";
             String usuario = "root";
-            String senha = "789888999";
+            String senha = "alunofatec";
             Connection c = DriverManager.getConnection(url,usuario,senha); 
             System.out.println("Conexao OK");
             return c;
